@@ -36,8 +36,15 @@ export default function PaginationDemo() {
         ))}
       </ul>
 
+      <button onClick={prevPage} disabled={!canPrevPage}>Previous</button>
+      <span> Page {currentPage} of {totalPages} </span>
+      <button onClick={nextPage} disabled={!canNextPage}>Next</button>
+
+      <p>
+        Showing items {startIndex + 1} - {endIndex + 1} (Total on this page: {itemsOnCurrentPage})
+      </p>
+
       
-      </div>
     </div>
   )
 }
