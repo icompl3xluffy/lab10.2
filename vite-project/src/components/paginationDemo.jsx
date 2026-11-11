@@ -43,7 +43,17 @@ export default function PaginationDemo() {
       <p>
         Showing items {startIndex + 1} - {endIndex + 1} (Total on this page: {itemsOnCurrentPage})
       </p>
-
+        <div>
+        {pageNumbers.map((num) => (
+          <button
+            key={num}
+            onClick={() => setPage(num)}
+            disabled={num === currentPage}
+          >
+            {num}
+          </button>
+        ))}
+      </div>
       
     </div>
   )
